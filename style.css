@@ -1,0 +1,78 @@
+.scode {
+    margin: 1.5625em 0;
+    padding: 0.6rem;
+    overflow: hidden;
+    font-size: 0.64rem;
+    page-break-inside: avoid;
+    border-left: 0.3rem solid #42b983;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.05), 0 0 0.05rem rgba(0, 0, 0, 0.1);
+    background-color: #fafafa;
+    letter-spacing: 0;
+}
+
+p.scode-title {
+    position: relative;
+    margin: -0.6rem -0.6rem 0.8em -0.6rem !important;
+    padding: 0.4rem 0.6rem 0.4rem 3.2rem;
+    font-weight: 700;
+    background-color: rgba(66, 185, 131, 0.1);
+}
+
+p.scode-title::before {
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    width: 12px;
+    height: 12px;
+    background-color: #42b983;
+    border-radius: 50%;
+    content: ' ';
+}
+
+.scode > p:not([class*='scode-title']) {
+    margin-left: 10px;
+}
+
+.info > .scode-title {
+    background-color: rgba(0, 184, 212, 0.1) !important;
+}
+
+.warn > .scode-title {
+    background-color: rgba(255, 145, 0, 0.1) !important;
+}
+
+.error > .scode-title {
+    background-color: rgba(255, 82, 82, 0.1) !important;
+}
+
+.scode.info {
+    border-color: #00b8d4 !important;
+}
+
+.scode.warn {
+    border-color: #ff9100 !important;
+}
+
+.scode.error {
+    border-color: #ff5252 !important;
+}
+
+.info > .scode-title::before {
+    background-color: #00b8d4 !important;
+    border-radius: 50%;
+}
+
+.warn > .scode-title::before {
+    background-color: #ff9100 !important;
+    border-radius: 50%;
+}
+
+.error > .scode-title::before {
+    background-color: #ff5252 !important;
+    border-radius: 50%;
+}
+
+.scode > :last-child {
+    margin-bottom: 0 !important;
+}
