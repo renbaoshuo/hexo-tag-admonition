@@ -1,7 +1,5 @@
-var md = require('markdown-it')('commonmark');
-
 function gen_html(type, title, content) {
-    let html_content = md.render(content);
+    let html_content = content;
     let html_title = title ? `<p class="scode-title">${title}</p>` : '';
     return `<div class="scode ${type.toLowerCase()}">${html_title}${html_content}</div>\n`;
 }
